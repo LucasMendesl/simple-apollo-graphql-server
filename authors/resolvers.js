@@ -17,8 +17,11 @@ const resolvers = {
         },
 
         editAuthor(_, { id, name, age, books }) {
-            let edit = Author.findOneAndUpdate({ id }, { name, age, books });
-            return edit;
+            return Author.findOneAndUpdate({ id }, { name, age, books });
+        },
+
+        removeAuthor(_, { id }) {
+            return Author.findOneAndRemove({ id });
         }
     }
 }

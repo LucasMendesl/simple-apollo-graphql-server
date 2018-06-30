@@ -15,8 +15,9 @@ const typeDefs = `
     }
 
     type Mutation {
-        addAuthor(name: String, age: Int, books: [String]): Author
-        editAuthor(id: String, name: String, age:Int, books: [String]): Author
+        addAuthor(name: String!, age: Int!, books: [String]!): Author
+        editAuthor(id: String!, name: String!, age:Int!, books: [String]!): Author
+        removeAuthor(id: String!): Author
     }
 `
 
